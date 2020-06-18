@@ -8,7 +8,7 @@ root=Tk()
 
 mixer.init() #initializing the mixer  
 
-# root.geometry("400x350")
+root.geometry("400x400")
 root.title("Muse")
 root.iconbitmap(r"headphone.ico")
 
@@ -39,15 +39,15 @@ frame0.pack(pady=10)
 details=Label(frame0,text="Ready to make some noise?",bg="black",fg="white")
 details.grid(row=0,column=0)
 
-length=Label(frame0,text="--:--",bg="black",fg="white")
-length.grid(row=0,column=1,padx=10)
+# length=Label(frame0,text="--:--",bg="black",fg="white")
+# length.grid(row=0,column=1,padx=10)
 
 def showDetails():
     details['text']="Playing "+os.path.basename(filename)
-    a=mixer.sound(filename)
-    totalLength=a.get_length()
-    mins,secs=divmod(totalLength,60)
-    print(round(mins),round(secs))
+    # a=mixer.sound(filename)
+    # totalLength=a.get_length()
+    # mins,secs=divmod(totalLength,60)
+    # print(round(mins),round(secs))
     
     # details['text']=str(round(mins))+":"+str(round(secs))
 
